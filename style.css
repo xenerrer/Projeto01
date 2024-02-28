@@ -1,0 +1,107 @@
+body, h1, h2, p, a {
+  margin: 0;
+  padding: 0;
+  font-family: 'inter', sans-serif;
+}
+
+.topbar {
+  background-color: #333; /* Cor de fundo da topbar */
+  height: 50px; /* Altura da topbar */
+  width: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.title {
+  font-size: 6em;
+  color: #333;
+  margin: 30px 0;
+  margin-top: 120px;
+  text-align: left;
+  position: relative;
+  top: -40px;
+  line-height: 100px;
+}
+
+.font-regular {
+  font-weight: normal; /* Estilo de fonte regular */
+}
+
+.font-bold {
+  font-weight: bolder; /* Estilo de fonte bold */
+}
+
+.team-members {
+  display: flex;
+  justify-content: space-between;
+}
+
+.member-card {
+  width: 23%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  min-height: 400px; /* Altura mínima adicionada */
+}
+
+
+.member-card .image-placeholder {
+  width: 100%; /* Garante que a imagem ocupe a largura total do card */
+  height: auto; /* Ajusta a altura automaticamente para manter a proporção */
+  border-radius: 10px; /* Arredonda os cantos da imagem como no design */
+  margin-bottom: 15px; /* Mantém o espaço abaixo da imagem */
+  display: block; /* Remove espaço extra abaixo da imagem */
+  object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível */
+  object-position: center; /* Centraliza a imagem no espaço disponível */
+}
+
+
+
+h2 {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.icon-placeholder {
+  width: 20px; /* Largura do placeholder do ícone */
+  height: 20px; /* Altura do placeholder do ícone */
+  background-color: #949393; /* Cor de fundo do placeholder do ícone */
+  margin-right: 5px; /* Espaço entre os placeholders dos ícones */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.our-team-heading {
+  text-align: right;
+  font-size: 14em; /* Ajuste o tamanho da fonte conforme necessário */
+  color: #000; /* ou qualquer cor que você preferir */
+  opacity: 0.05; /* 20% de opacidade */
+  margin-top: 0px; /* Espaço acima do texto, ajuste conforme necessário */
+  font-weight: bold; /* Torna a fonte negrito */
+}
+
+
+
+a:hover {
+  background-color: #0056b3;
+}
