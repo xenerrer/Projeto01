@@ -1,9 +1,34 @@
-body, h1, h2, p, a {
-  margin: 0;
-  padding: 0;
-  font-family: 'inter', sans-serif;
+body {
+  background-image:url(Assets/bg_1920x1080.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* A imagem não irá rolar junto com a página */
+  zoom: 67%;
 }
 
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 2s; /* Duração de 2 segundos para a animação de fade-in */
+  animation-fill-mode: both; /* A animação permanecerá no estado final após terminar */
+}
+
+.member-card:nth-child(1) { animation-delay: 0s; }
+.member-card:nth-child(2) { animation-delay: 0.2s; }
+.member-card:nth-child(3) { animation-delay: 0.4s; }
+.member-card:nth-child(4) { animation-delay: 0.6s; }
+
+h1, h2, p, a, .our-team-heading{
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  
+}
 .topbar {
   background-color: #333; /* Cor de fundo da topbar */
   height: 50px; /* Altura da topbar */
@@ -17,7 +42,7 @@ body, h1, h2, p, a {
 
 .title {
   font-size: 6em;
-  color: #333;
+  color: #666666;
   margin: 30px 0;
   margin-top: 120px;
   text-align: left;
@@ -37,19 +62,34 @@ body, h1, h2, p, a {
 .team-members {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap; /* Isso permite que os cartões se ajustem conforme o tamanho da tela */
 }
 
 .member-card {
-  width: 23%;
-  background-color: #f0f0f0;
+  width: auto;
+  background-color: #1e1e1e;
   padding: 20px;
   box-sizing: border-box;
   text-align: left;
   border-radius: 8px;
   margin-bottom: 30px;
-  min-height: 400px; /* Altura mínima adicionada */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* Altura automática para conter todo o conteúdo */
+  transition: transform 0.3s ease;
+  overflow: hidden; /* Esconde qualquer conteúdo que vaze */
 }
 
+.member-card:hover {
+  transform: scale(1.15); /* Aumenta o tamanho do card em 5% */
+}
+
+.member-interaction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .member-card .image-placeholder {
   width: 100%; /* Garante que a imagem ocupe a largura total do card */
@@ -61,47 +101,198 @@ body, h1, h2, p, a {
   object-position: center; /* Centraliza a imagem no espaço disponível */
 }
 
+.social-icons {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
 
+.member-interaction .learn-more-btn, .social-icons .social-icon {
+  text-decoration: none;
+  color: white;
+  background-color: #464646;
+  padding: 5px 10px;
+  margin-inline: 3px;
+  border-radius: 3px;
+  display: flexbox;
+  transition: background-color 0.3s;
+  
+}
+
+.member-interaction .learn-more-btn:hover, .social-icons .social-icon:hover {
+  background-color: #0056b3;
+}
 
 h2 {
   font-size: 1.2em;
-  color: #333;
+  color: #bdbdbd;
   margin-bottom: 5px;
 }
 
 p {
-  color: #666;
+  color: #bdbdbd;
   margin-bottom: 15px;
-}
-
-.icon-placeholder {
-  width: 20px; /* Largura do placeholder do ícone */
-  height: 20px; /* Altura do placeholder do ícone */
-  background-color: #949393; /* Cor de fundo do placeholder do ícone */
-  margin-right: 5px; /* Espaço entre os placeholders dos ícones */
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  background-color: #007bff;
-  padding: 10px 15px;
-  border-radius: 5px;
-  display: inline-block;
-  transition: background-color 0.3s;
 }
 
 .our-team-heading {
   text-align: right;
   font-size: 14em; /* Ajuste o tamanho da fonte conforme necessário */
-  color: #000; /* ou qualquer cor que você preferir */
+  color: #bdbdbd; /* ou qualquer cor que você preferir */
   opacity: 0.05; /* 20% de opacidade */
   margin-top: 0px; /* Espaço acima do texto, ajuste conforme necessário */
   font-weight: bold; /* Torna a fonte negrito */
 }
 
+.footer {
+  color: #ffffff;
+  display: flex;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  align-items: center; /* Alinha os itens verticalmente */
+}
 
+.footer-left, .footer-center, .footer-right {
+  display: flex;
+  flex-direction: column;
+  padding: 0 170px; /* Adiciona espaçamento interno */
+}
+
+.footer-left {
+  color: #73757B;
+  font-size: 16px;
+  font-family: Inter;
+  font-weight: 200;
+  line-height: 23.11px;
+  word-wrap: break-word;
+}
+
+.footer-center {
+  flex: 1; /* Permite que o centro ocupe o espaço disponível */
+  text-align: center;
+  line-height: 2;
+  width: 235px;
+  
+}
+
+.footer-right {
+  align-items: flex-end; /* Alinha o conteúdo à direita */
+  padding-right: 170px; /* Remove o espaçamento à direita para alinhar com o último cartão */
+  line-height: 3;
+}
+
+.footer-links a, .social-icons-footer a {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: transparent; /* Remove o fundo */
+  padding: 5px 10px; /* Mantém o padding para consistência, ajuste conforme necessário */
+  border-radius: 3px; /* Mantém o border-radius para consistência, ajuste conforme necessário */
+}
+
+.footer-links a:hover, .social-icons-footer a:hover {
+  color: #0056b3; /* Muda a cor no hover, ajuste conforme desejado */
+  background-color: transparent; /* Mantém o fundo transparente no hover */
+}
+
+.social-icons-footer {
+  justify-content: center;
+  margin-top: 10px; /* Adiciona espaço acima dos ícones */
+  color: #ffffff;
+}
+
+.social-icons-footer a {
+  margin: 0 5px; /* Espaçamento entre os ícones */
+  color: #ffffff;
+}
+
+.fiap-logo {
+  height: auto;
+  max-width: 100px; /* Define a largura máxima do logo */
+}
+
+/* Estilos para dispositivos menores */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: stretch; /* Estica os itens para ocupar toda a largura */
+  }
+
+  .footer-left, .footer-center, .footer-right {
+    align-items: center;
+    max-width: none; /* Remove a largura máxima em dispositivos menores */
+    padding: 10px 0; /* Adiciona espaçamento vertical */
+  }
+
+  .footer-right {
+    order: -1; /* Coloca o "Apoio: FIAP" acima em dispositivos menores */
+  }
+}
+
+.sobre-mim-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Usar 100vh para fazer a div ocupar a altura total da tela */
+}
+
+.image-section {
+  margin-right: 50px; /* Ajuste o espaçamento conforme necessário */
+}
+
+.profile-image {
+  border-radius: 10px; /* Arredonda os cantos da imagem */
+  width: 600px; /* Ajuste a largura conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.text-section {
+  max-width: 600px; /* Ajuste a largura máxima do texto conforme necessário */
+}
+
+h1 {
+  font-size: 2em; /* Ajuste o tamanho do título conforme necessário */
+  color: #bdbdbd; /* Cor do texto */
+}
+
+h2 {
+  font-size: 1em; /* Ajuste o tamanho do subtítulo conforme necessário */
+  color: #bdbdbd; /* Cor do texto */
+  margin-bottom: 10px; /* Espaçamento abaixo do subtítulo */
+}
+
+p {
+  color: #bdbdbd; /* Cor do parágrafo */
+  line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+a {
+  color: #bdbdbd; /* Cor da pagina linkadas */
+  text-decoration: none;
+  font-weight: 900;
+} 
 
 a:hover {
+  color: #0056b3; /* Muda a cor no hover, ajuste conforme desejado */
+  text-decoration:underline;
+}
+
+div {
+  margin: 1px;
+  padding: 1px;
+  box-sizing: border-box;
+}
+
+.conheca-btn {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #464646;
+  padding: 5px 10px;
+  margin-inline: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.conheca-btn:hover {
   background-color: #0056b3;
 }
