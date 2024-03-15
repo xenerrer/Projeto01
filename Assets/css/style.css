@@ -1,10 +1,26 @@
+.topbar {
+  background-color: #333; /* Cor de fundo da topbar */
+  height: 50px; /* Altura da topbar */
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-image:url(Assets/bg_1920x1080.jpg);
+  background-image:url(../images/bg_1920x1080.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* A imagem não irá rolar junto com a página */
-  zoom: 67%;
 }
 
 @keyframes fadeIn {
@@ -29,26 +45,21 @@ h1, h2, p, a, .our-team-heading{
   padding: 0;
   
 }
-.topbar {
-  background-color: #333; /* Cor de fundo da topbar */
-  height: 50px; /* Altura da topbar */
-  width: 100%;
-}
 
 .container {
   width: 80%;
-  margin: 20px auto;
+  margin: 2rem auto;
 }
 
 .title {
-  font-size: 6em;
+  font-size: 10rem;
   color: #666666;
-  margin: 30px 0;
-  margin-top: 120px;
+  margin: 3rem 0;
+  margin-top: 6rem;
   text-align: left;
   position: relative;
   top: -40px;
-  line-height: 100px;
+  line-height: 10rem;
 }
 
 .font-regular {
@@ -66,13 +77,13 @@ h1, h2, p, a, .our-team-heading{
 }
 
 .member-card {
-  width: auto;
+  width: 24%;
   background-color: #1e1e1e;
-  padding: 20px;
+  padding: 2rem;
   box-sizing: border-box;
   text-align: left;
-  border-radius: 8px;
-  margin-bottom: 30px;
+  border-radius: 0.8rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -94,8 +105,8 @@ h1, h2, p, a, .our-team-heading{
 .member-card .image-placeholder {
   width: 100%; /* Garante que a imagem ocupe a largura total do card */
   height: auto; /* Ajusta a altura automaticamente para manter a proporção */
-  border-radius: 10px; /* Arredonda os cantos da imagem como no design */
-  margin-bottom: 15px; /* Mantém o espaço abaixo da imagem */
+  border-radius: 1rem; /* Arredonda os cantos da imagem como no design */
+  margin-bottom: 1.5rem; /* Mantém o espaço abaixo da imagem */
   display: block; /* Remove espaço extra abaixo da imagem */
   object-fit: cover; /* Garante que a imagem cubra todo o espaço disponível */
   object-position: center; /* Centraliza a imagem no espaço disponível */
@@ -111,9 +122,9 @@ h1, h2, p, a, .our-team-heading{
   text-decoration: none;
   color: white;
   background-color: #464646;
-  padding: 5px 10px;
-  margin-inline: 3px;
-  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  margin-inline: 0.3rem;
+  border-radius: 0.3rem;
   display: flexbox;
   transition: background-color 0.3s;
   
@@ -124,29 +135,29 @@ h1, h2, p, a, .our-team-heading{
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 2rem;
   color: #bdbdbd;
-  margin-bottom: 5px;
+  margin-bottom: 0.5rem;
 }
 
 p {
   color: #bdbdbd;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .our-team-heading {
   text-align: right;
-  font-size: 14em; /* Ajuste o tamanho da fonte conforme necessário */
+  font-size: 14rem; /* Ajuste o tamanho da fonte conforme necessário */
   color: #bdbdbd; /* ou qualquer cor que você preferir */
   opacity: 0.05; /* 20% de opacidade */
-  margin-top: 0px; /* Espaço acima do texto, ajuste conforme necessário */
+  margin-top: 0; /* Espaço acima do texto, ajuste conforme necessário */
   font-weight: bold; /* Torna a fonte negrito */
 }
 
 .footer {
   color: #ffffff;
   display: flex;
-  padding: 20px;
+  padding: 2rem;
   font-family: 'Inter', sans-serif;
   align-items: center; /* Alinha os itens verticalmente */
 }
@@ -154,15 +165,15 @@ p {
 .footer-left, .footer-center, .footer-right {
   display: flex;
   flex-direction: column;
-  padding: 0 170px; /* Adiciona espaçamento interno */
+  padding: 0 17rem; /* Adiciona espaçamento interno */
 }
 
 .footer-left {
   color: #73757B;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Inter;
   font-weight: 200;
-  line-height: 23.11px;
+  line-height: 2rem;
   word-wrap: break-word;
 }
 
@@ -170,13 +181,13 @@ p {
   flex: 1; /* Permite que o centro ocupe o espaço disponível */
   text-align: center;
   line-height: 2;
-  width: 235px;
+  width: 26rem;
   
 }
 
 .footer-right {
   align-items: flex-end; /* Alinha o conteúdo à direita */
-  padding-right: 170px; /* Remove o espaçamento à direita para alinhar com o último cartão */
+  padding-right: 17rem; /* Remove o espaçamento à direita para alinhar com o último cartão */
   line-height: 3;
 }
 
@@ -184,8 +195,8 @@ p {
   text-decoration: none;
   color: #ffffff;
   background-color: transparent; /* Remove o fundo */
-  padding: 5px 10px; /* Mantém o padding para consistência, ajuste conforme necessário */
-  border-radius: 3px; /* Mantém o border-radius para consistência, ajuste conforme necessário */
+  padding: 0.5rem 1rem; /* Mantém o padding para consistência, ajuste conforme necessário */
+  border-radius: 0.3rem; /* Mantém o border-radius para consistência, ajuste conforme necessário */
 }
 
 .footer-links a:hover, .social-icons-footer a:hover {
@@ -195,18 +206,18 @@ p {
 
 .social-icons-footer {
   justify-content: center;
-  margin-top: 10px; /* Adiciona espaço acima dos ícones */
+  margin-top: 1rem; /* Adiciona espaço acima dos ícones */
   color: #ffffff;
 }
 
 .social-icons-footer a {
-  margin: 0 5px; /* Espaçamento entre os ícones */
+  margin: 0 0.5rem; /* Espaçamento entre os ícones */
   color: #ffffff;
 }
 
 .fiap-logo {
   height: auto;
-  max-width: 100px; /* Define a largura máxima do logo */
+  max-width: 10rem; /* Define a largura máxima do logo */
 }
 
 /* Estilos para dispositivos menores */
@@ -219,7 +230,7 @@ p {
   .footer-left, .footer-center, .footer-right {
     align-items: center;
     max-width: none; /* Remove a largura máxima em dispositivos menores */
-    padding: 10px 0; /* Adiciona espaçamento vertical */
+    padding: 1rem 0; /* Adiciona espaçamento vertical */
   }
 
   .footer-right {
@@ -235,31 +246,32 @@ p {
 }
 
 .image-section {
-  margin-right: 50px; /* Ajuste o espaçamento conforme necessário */
+  margin-right: 5rem; /* Ajuste o espaçamento conforme necessário */
 }
 
 .profile-image {
-  border-radius: 10px; /* Arredonda os cantos da imagem */
-  width: 600px; /* Ajuste a largura conforme necessário */
+  border-radius: 1rem; /* Arredonda os cantos da imagem */
+  width: 50rem; /* Ajuste a largura conforme necessário */
   height: auto; /* Mantém a proporção da imagem */
 }
 
 .text-section {
-  max-width: 600px; /* Ajuste a largura máxima do texto conforme necessário */
+  max-width: 60rem; /* Ajuste a largura máxima do texto conforme necessário */
 }
 
 h1 {
-  font-size: 2em; /* Ajuste o tamanho do título conforme necessário */
+  font-size: 3rem; /* Ajuste o tamanho do título conforme necessário */
   color: #bdbdbd; /* Cor do texto */
 }
 
 h2 {
-  font-size: 1em; /* Ajuste o tamanho do subtítulo conforme necessário */
+  font-size: 2rem; /* Ajuste o tamanho do subtítulo conforme necessário */
   color: #bdbdbd; /* Cor do texto */
-  margin-bottom: 10px; /* Espaçamento abaixo do subtítulo */
+  margin-bottom: 1rem; /* Espaçamento abaixo do subtítulo */
 }
 
 p {
+  font-size: 1rem;
   color: #bdbdbd; /* Cor do parágrafo */
   line-height: 1.6; /* Espaçamento entre linhas */
 }
@@ -276,19 +288,19 @@ a:hover {
 }
 
 div {
-  margin: 1px;
-  padding: 1px;
+  margin: 0.1rem;
+  padding: 0.1rem;
   box-sizing: border-box;
 }
 
 .conheca-btn {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   text-decoration: none;
   color: white;
   background-color: #464646;
-  padding: 5px 10px;
-  margin-inline: 3px;
-  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  margin-inline: 0.3rem;
+  border-radius: 0.3rem;
   display: inline-block;
   transition: background-color 0.3s;
 }
@@ -296,3 +308,7 @@ div {
 .conheca-btn:hover {
   background-color: #0056b3;
 }
+
+
+
+
